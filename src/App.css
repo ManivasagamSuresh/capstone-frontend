@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+#welcome{
+  
+  position: relative;
+  height: 100vh;
+  background-image: url("./welcome-bg.webp") ;
+  background-size: cover;
+  background-position: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcomeH{
+  position: absolute;
+ color:aliceblue;
+ text-align: center;
+ top: 150px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.text{
+  position: relative;
+  
+  top: 60vh; 
+  color: black;
+  font-size: 5vh;
+  font-family: 'Times New Roman', Times, serif;
+  border: 1px solid #FFDEAD;
+  background :rgba(248,248,255,0.5) ;
+  border-radius: 3em;
+  transition: 1s;
+  animation: upper;
+  animation-duration:2s ;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .welcomelogin{
+    position: absolute;
+    right: 2vw;
+    top: 4vh;
+    opacity: 0.8;
+    font-size: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  .error{
+    border: 1px solid red;
   }
+  .success{
+    border: 1px solid green;
+  }
+  .inputcenter{
+    position: relative;
+    left: 30%;
+    top: 20vh;
+  }
+  #login{
+    height: 100vh;
+    background-image: url("https://www.themanual.com/wp-content/uploads/sites/9/2021/09/white-sneakers.jpg?fit=800%2C800&p=1") ;
+    background-size: cover;
+    background-position: center;
+    
+  }
+  .login1{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 45vw;
+    position: relative;
+    top: 30vh;
+    color: #585858;
+
+  }
+  .adminDashboard{
+    height: 100vh;
+    background-image: url("./dashboardbg2.jpg") ;
+    background-size: cover;
+    background-position: center;
+  
+    }
+    .dash1{
+        position: relative;
+        font-size:25px ;
+  top: 55vh;
+  color: #707070;
+  border: 1px solid #707070;
+  padding: 25px;
+  margin-top: 15px;
+  background :rgba(248,248,255,0.5) ;
+  border-radius: 50px;
+  transition: 1s;
+  animation: upper;
+  animation-duration:2s ;
+  }
+  .dash2{
+    color: #707070;
+    position: relative;
+    font-size:25px ;
+    top: 55vh;
+    margin-left: 10px;
+    margin-top: 15px;
+border: 1px solid  #707070;
+padding: 25px;
+background :rgba(248,248,255,0.5) ;
+border-radius: 50px;
+transition: 1s;
+animation: upper;
+animation-duration:2s ;
 }
+  @keyframes upper{
+    0%{
+      transform: translateY(300px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  .addproduct{
+    height: 100vh;
+    background-image: url("https://www.themanual.com/wp-content/uploads/sites/9/2021/09/white-sneakers.jpg?fit=800%2C800&p=1") ;
+    background-size: cover;
+    background-position: center;
+    
+  }
+  .viewproducts{
+
+background-color: 	#A7C7E7;
+
+
+  }
+  
+  .description{
+    margin: 10px 0;
+    }
+ 
+  .card{
+    height: 500px;
+  }
+  .cardadmin{
+    height:550px;
+  }
+  .preloader{
+    position: absolute;
+    top: 30vh;
+  }
+  .heading{
+    margin: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
+    color: #89CFF0;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .seasonsale{
+    color:#D70040
+  }
+  .delete{
+    margin-left: 5px;
+  }
+  .headingdash{
+    text-align: center;
+    color: #D70040;
+    position: absolute;
+    top: 50px;
+    right: 2vw;
+    text-shadow: 1px 2px 1px whitesmoke;
+  }
+  
