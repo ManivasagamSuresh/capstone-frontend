@@ -73,7 +73,7 @@ console.log(filtered);
         <div className='container viewproducts' >
           <Topbar filterBrand={filterBrand} filterGender={filterGender} filterModel={filterModel} searchfilter={searchfilter}/>
         <div className='row'>
-          <h2 className='col-lg-12 heading'>All your Products are listed below</h2>
+          <h3 className='col-lg-12 heading' style={{width : "500px"}}><i>All your Products are listed below</i></h3>
           {
             Products.map((prod)=>{
               return <Adminproductcard prod={prod}/>
