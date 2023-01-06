@@ -5,7 +5,7 @@ function Productcard({prod}) {
   return (
 
     <div className='col-lg-3 productcard description'>
-      <div class="card" style={{width: "18rem"}}>
+      <div class="card" >
       <img height={"250px"} className='cardimage card-img-top' src={`${prod.image}`}/>
       <div className='card-body'>  
       <h6>{prod.description}</h6>
@@ -17,5 +17,5 @@ function Productcard({prod}) {
     </div>
   )
 }
-
+// style={{width: "18rem"}}
 export default Productcard

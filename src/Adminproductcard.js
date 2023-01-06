@@ -16,7 +16,7 @@ function Adminproductcard({prod}) {
     }
   return (
     <div className='col-lg-3 productcard description'>
-      <div class="card cardadmin" style={{width: "18rem"}}>
+      <div class="card cardadmin" >
       <img height={"250px"}  className='cardimage card-img-top' src={`${prod.image}`}/>
       <div className='card-body'>  
       <h6>{prod.description}</h6>
