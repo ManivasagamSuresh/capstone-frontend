@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Adminproductcard from './Adminproductcard'
 import Productcard from './Productcard'
 import Topbar from './Topbar'
+import { Config } from './Config'
 
 function AdminProducts() {
   const[Products,setProducts]=useState([])
@@ -13,7 +14,7 @@ function AdminProducts() {
   let items = async()=>{
     try {
       setLoader(true);
-      let products = await axios.get("http://localhost:3000/admin/products")
+      let products = await axios.get(`${Config.api}/admin/products`)
      setProducts(products.data);
      setLoader(false);
     } catch (error) {
@@ -25,7 +26,7 @@ function AdminProducts() {
     // console.log(value);
     let brand ={"brand":`${value}`}
     console.log(brand)
-    let data = await axios.post('http://localhost:3000/admin/products/filter/brand',brand);
+    let data = await axios.post(`${Config.api}/admin/products/filter/brand`,brand);
     console.log(data.data);
     setProducts(data.data)
   }
@@ -33,7 +34,7 @@ function AdminProducts() {
     // console.log(value);
     let gender ={"gender":`${value}`}
     console.log(gender)
-    let data = await axios.post('http://localhost:3000/admin/products/filter/gender',gender);
+    let data = await axios.post(`${Config.api}/admin/products/filter/gender`,gender);
     console.log(data.data);
     setProducts(data.data)
   }
@@ -41,14 +42,14 @@ function AdminProducts() {
     // console.log(value);
     let model ={"Model":`${value}`}
     console.log(model)
-    let data = await axios.post('http://localhost:3000/admin/products/filter/model',model);
+    let data = await axios.post(`${Config.api}/admin/products/filter/model`,model);
     console.log(data.data);
     setProducts(data.data)
   }
  let searchfilter=async(value)=>{
 console.log(value);
 let keys=["brand"]
-let product = await axios.get("http://localhost:3000/admin/products")
+let product = await axios.get(`${Config.api}/admin/products`)
 let products = product.data;
 console.log(products);
 let filtered = products.filter((item)=>{

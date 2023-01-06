@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useFormik } from 'formik'
 import React from 'react'
+import { Config } from './Config';
 
 function AddProducts() {
   const formik = useFormik({
@@ -26,7 +27,7 @@ function AddProducts() {
     },
     onSubmit:async(values)=>{
       try {
-        let product =await axios.post("http://localhost:3000/admin/addproduct",values);
+        let product =await axios.post(`${Config.api}/admin/addproduct`,values);
         console.log(product.data)
         formik.resetForm();
     

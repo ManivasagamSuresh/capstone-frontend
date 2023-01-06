@@ -2,12 +2,13 @@ import axios from 'axios';
 import React from 'react'
 import { AiOutlineHeart } from 'react-icons/ai';
 import { Link, useNavigate } from 'react-router-dom';
+import { Config } from './Config';
 
 function Adminproductcard({prod}) {
     let navigate = useNavigate();
     let deleteProd = async(id)=>{
       try {
-        let proddelete = await axios.post(`http://localhost:3000/admin/deleteproduct/${id}`)
+        let proddelete = await axios.post(`${Config.api}/admin/deleteproduct/${id}`)
         alert('Product deleted')
       } catch (error) {
         console.log(error)

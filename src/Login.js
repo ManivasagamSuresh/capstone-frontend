@@ -2,6 +2,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Config } from './Config'
 
 function Login() {
   let navigate = useNavigate()
@@ -19,7 +20,7 @@ function Login() {
       return error;
     },
     onSubmit: async(values) => {
-      let user =await axios.post("http://localhost:3000/admin/login",values);
+      let user =await axios.post(`${Config.api}/admin/login`,values);
        console.log(user.data);
        if(user.data.message === "success"){
         navigate("/portal/dashboard")

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useFormik } from 'formik'
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import { Config } from './Config'
 
 function EditProduct() {
   const params = useParams();
@@ -11,7 +12,7 @@ function EditProduct() {
 
   let edit = async()=>{
     try {
-      let product =await axios.get(`http://localhost:3000/admin/findproduct/${params.id}`);
+      let product =await axios.get(`${Config.api}/admin/findproduct/${params.id}`);
       formik.setValues(product.data);
       console.log(product.data);
    
@@ -42,7 +43,7 @@ function EditProduct() {
     },
     onSubmit:async(values)=>{
       try {
-        let product =await axios.post(`http://localhost:3000/admin/editproduct/${params.id}`,values);
+        let product =await axios.post(`${Config.api}/admin/editproduct/${params.id}`,values);
       console.log(product.data)
       formik.resetForm();  
       } catch (error) {
